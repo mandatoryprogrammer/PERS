@@ -1,0 +1,57 @@
+#main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.screenshot {
+    width: 700px;
+    height: 350px;
+    margin: 0px;
+}
+
+.column_screenshot {
+    width: 700px;
+}
+
+.column_uri {
+    width: 300px;
+}
+
+.column_title {
+}
+
+.column_number {
+    width: 25px;
+}
+
+.column_cookies {
+    width: 100px;
+}
+
+.column_html {
+    width: 100px;
+}
+
+.modal-dialog {
+    width: 95%;
+    padding: 0;
+}
+
+.modal-content {
+    height: 100%;
+    border-radius: 0;
+}
+
+code {
+    overflow: scroll;
+    font-size: 0.85em;
+    height: 500px;
+}
+
+.hidden_cookie_data {
+    display: none;
+}
+
+.hidden_html_data {
+    display: none;
+}

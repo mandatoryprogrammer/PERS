@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PERS - The Passive Expired Resource Scanner</title>
+<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+    <!-- None of this code should reflected the quality of my employer, especially the JavaScript -->
+    <div class="bs-docs-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>PERS</h1>
+                    <h3>The Passive Expired Resource Scanner</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form_box">
+                <div class="well bs-component">
+                    <form id="" class="form-horizontal">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <legend>Possible Expired Domain Found:</legend>
+                            <center>
+                                <h2 id="vulnerable_domain"></h2>
+                            </center>
+                            <hr />
+                            <a id="gandi_button" href="" target="_blank" class="btn btn-info btn-lg btn-block">Check domain on <b>Gandi</b></a>
+                            <a id="namecheap_button" target="_blank" href="" class="btn btn-warning btn-lg btn-block">Check domain on <b>Namecheap</b></a>
+                            <a id="godaddy_button" href="" target="_blank" class="btn btn-success btn-lg btn-block">Check domain on <b>GoDaddy</b></a>
+                            <a id="google_button" href="" target="_blank" class="btn btn-primary btn-lg btn-block">Check domain on <b>Google Domains</b></a>
+                            <hr />
+                            <h3><i>Resource Type: </i></h3>
+                            <blockquote>
+                                <p id="resource_type"></p>
+                            </blockquote>
+                            <h3><i>Loaded by:</i></h3>
+                            <blockquote>
+                                <p id="vulnerable_url"></p>
+                            </blockquote>
+                            <h3><i>Full Resource URL: </i></h3>
+                            <blockquote>
+                                <p id="full_resource_url"></p>
+                            </blockquote>
+                            <hr />
+                        </fieldset>
+                    </form>
+                    <div>
+                        <i>Disclaimer: All expired domain detection is done with Domainr & GoDaddy's public API. Due to this being unreliable, alternative registrars are available to help double check the accuracy.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="credits" class="well well-sm">
+        Built by Matthew Bryant (aka mandatory) - <a target="_blank" href="https://github.com/mandatoryprogrammer">Github</a> - <a target="_blank" href="https://twitter.com/IAmMandatory">Twitter</a> - <a target="_blank" href="https://thehackerblog.com/">Blog</a>
+        <br />
+        <i>Please <a href="mailto:mandatory@gmail.com">bother me</a> with suggestions for this tool to make it better!</i>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://thehackerblog.com/pers_update_links.js"></script>
+</body>
+</html>
