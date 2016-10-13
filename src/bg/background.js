@@ -1,4 +1,24 @@
 /*
+ * Initialize PERS options and listen for changes.
+ */
+var checkDanglingPolicy = false;
+if (typeof chrome == 'object' && chrome.storage) {
+    (chrome.storage.sync || chrome.storage.local).get({
+        checkDanglingPolicy: checkDanglingPolicy,
+    }, function(items) {
+        if (items) {
+            checkDanglingPolicy = items.checkDanglingPolicy;
+        }
+    });
+    chrome.storage.onChanged.addListener(function(changes) {
+        if (changes.checkDanglingPolicy) {
+            checkDanglingPolicy = changes.checkDanglingPolicy.newValue;
+            
+        }
+    });
+}
+
+/*
  * Catch any resolution errors thrown via HTTP/HTTPS requests.
  */
 chrome.webRequest.onErrorOccurred.addListener(
