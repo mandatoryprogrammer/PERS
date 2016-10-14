@@ -1,0 +1,13 @@
+body {
+    margin: 2em 3em;
+}
+label {
+    display: block;
+    margin: 1em 0;;
+    line-height: 150%;
+}
+footer {
+    border-top: 1px solid #CCC;
+    padding: 1rem 0;
+    text-align: center;
+}

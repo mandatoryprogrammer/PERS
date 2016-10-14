@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "description": "A passive scanning tool for finding expired domain vulnerabilites while you browse.",
   "homepage_url": "https://thehackerblog.com/",
-  "content_security_policy": "default-src 'self' https://thehackerblog.com; style-src * https://fonts.googleapis.com; img-src *; font-src *; connect-src *;",
+  "content_security_policy": "default-src 'self' https://thehackerblog.com; style-src * https://fonts.googleapis.com; img-src 'self' data:; font-src *; connect-src *;",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -15,9 +15,14 @@
     "page": "src/bg/background.html",
     "persistent": true
   },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "chrome_style": true
+  },
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "storage",
     "<all_urls>"
   ]
 }
