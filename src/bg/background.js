@@ -88,5 +88,6 @@ function godaddy_domain_check( domain, cb ) {
     }
     xhr.open( "GET", "https://api.ote-godaddy.com/v1/domains/available?domain=" + encodeURIComponent( domain ) + "&checkType=FULL&forTransfer=false", true );
     xhr.setRequestHeader( "Accept", "application/json" );
+    xhr.setRequestHeader( "Authorization", "sso-key [API KEY]:[SECRET]" );
     xhr.send( null );
 }
