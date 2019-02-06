@@ -1,5 +1,6 @@
 if( window.location.hash ) {
     var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    hash = decodeURIComponent(hash);
     var fire_details = JSON.parse( hash );
     console.log( fire_details );
     document.getElementById( "vulnerable_domain" ).innerText = fire_details[ "base_domain" ];
